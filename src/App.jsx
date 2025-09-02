@@ -1,13 +1,19 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import './App.css';
-import Card from './components/Card';
 import Gameboard from './components/Gameboard';
 import Scoreboard from './components/Scoreboard';
 
 function App() {
+
+  const [currentScore, setCurrentScore]=useState(0);
+
+  function handleCardClick(){
+    setCurrentScore(prevScore=>prevScore+1);
+  }
+
   return(<div>
-    <Scoreboard />
-    <Gameboard />
+    <Scoreboard cScore={currentScore}/>
+    <Gameboard cardClickHandler={handleCardClick}/>
   </div>);
 }
 

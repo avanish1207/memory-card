@@ -1,17 +1,17 @@
 import './Gameboard.css';
 import Card from './Card';
 
-function Gameboard(){
+function Gameboard({cardClickHandler}){
     return(
         <div className='gameboard'>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
+            <Card handleClick={cardClickHandler}></Card>
+            <Card handleClick={cardClickHandler}></Card>
+            <Card handleClick={cardClickHandler}></Card>
+            <Card handleClick={cardClickHandler}></Card>
+            <Card handleClick={cardClickHandler}></Card>
+            <Card handleClick={cardClickHandler}></Card>
+            <Card handleClick={cardClickHandler}></Card>
+            <Card handleClick={cardClickHandler}></Card>
         </div>
     );
 }

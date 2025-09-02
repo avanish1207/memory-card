@@ -1,8 +1,8 @@
 import './Card.css';
 
-function Card(){
+function Card({handleClick}){
     return(
-        <div className='card'>
+        <div className='card' onClick={handleClick}>
             <p>Card</p>
         </div>
     );

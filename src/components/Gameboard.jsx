@@ -8,6 +8,10 @@ function Gameboard(){
             <Card></Card>
             <Card></Card>
             <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
         </div>
     );
 }

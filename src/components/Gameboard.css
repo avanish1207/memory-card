@@ -1,0 +1,5 @@
+.gameboard{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 370.4px);
+}

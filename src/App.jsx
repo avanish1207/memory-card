@@ -7,14 +7,20 @@ function App() {
 
   const [currentScore, setCurrentScore]=useState(0);
   const [clickedCards, setClickedCards]=useState([]);
+  const [highScore, setHighScore]=useState(0);
   function handleCardClick(cardId){
     if(clickedCards.includes(cardId)){
       setCurrentScore(0)
       setClickedCards([]);
     } else{
       setClickedCards([...clickedCards, cardId]);
-      setCurrentScore(prevScore=>prevScore+1);
+      const newScore=currentScore+1;
+      setCurrentScore(newScore);
+      if(newScore>highScore){
+        setHighScore(newScore);
+      }
     }
+    
   }
 
   const array=Array.from({length:8},(_,index)=>({ //kinda weird way of creating an array(always forget it so copy paste)
@@ -24,7 +30,7 @@ function App() {
   console.log(array);
 
   return(<div>
-    <Scoreboard cScore={currentScore}/>
+    <Scoreboard cScore={currentScore} hScore={highScore}/>
     <Gameboard cardClickHandler={handleCardClick} cardData={array}/>
   </div>);
 }

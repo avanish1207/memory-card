@@ -8,7 +8,7 @@ function App() {
 
   const [array, setArray]=useState([]);
   const [pokeSprites, setPokeSprites]=useState([]);
-  const pokeIds=[1, 4, 7, 10, 13, 16, 19, 25];
+  const pokeIds=[1, 4, 7, 10, 13, 16, 19, 25, 30, 35, 40, 45];
   useEffect(()=>{
     async function getPokemon() {
     try {

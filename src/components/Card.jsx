@@ -1,9 +1,9 @@
 import './Card.css';
 
-function Card({handleClick, cardId, cardName}){
+function Card({handleClick, cardId, cardName, cardSprite}){
     return(
         <div className='card' onClick={()=>handleClick(cardId)}>
-            <p>{cardName}</p>
+            <img src={cardSprite} alt={cardName} />
         </div>
     );
 }

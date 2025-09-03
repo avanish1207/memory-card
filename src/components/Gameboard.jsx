@@ -10,6 +10,7 @@ function Gameboard({cardClickHandler, cardData}){
                     key={card.id}
                     cardId={card.id}
                     cardName={card.name}
+                    cardSprite={card.sprite}
                     handleClick={cardClickHandler}
                     />
                 ))

@@ -1,17 +1,19 @@
 import './Gameboard.css';
 import Card from './Card';
 
-function Gameboard({cardClickHandler}){
+function Gameboard({cardClickHandler, cardData}){
     return(
         <div className='gameboard'>
-            <Card handleClick={cardClickHandler}></Card>
-            <Card handleClick={cardClickHandler}></Card>
-            <Card handleClick={cardClickHandler}></Card>
-            <Card handleClick={cardClickHandler}></Card>
-            <Card handleClick={cardClickHandler}></Card>
-            <Card handleClick={cardClickHandler}></Card>
-            <Card handleClick={cardClickHandler}></Card>
-            <Card handleClick={cardClickHandler}></Card>
+            {
+                cardData.map(card=>(
+                    <Card 
+                    key={card.id}
+                    cardId={card.id}
+                    cardName={card.name}
+                    handleClick={cardClickHandler}
+                    />
+                ))
+            }
         </div>
     );
 }

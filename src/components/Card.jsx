@@ -1,9 +1,9 @@
 import './Card.css';
 
-function Card({handleClick}){
+function Card({handleClick, cardId, cardName}){
     return(
-        <div className='card' onClick={handleClick}>
-            <p>Card</p>
+        <div className='card' onClick={()=>handleClick(cardId)}>
+            <p>{cardName}</p>
         </div>
     );
 }

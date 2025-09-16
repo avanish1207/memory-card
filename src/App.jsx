@@ -1,6 +1,5 @@
 import { useEffect,useState } from 'react'
 import { shuffle } from 'lodash';
-import './App.css';
 import Gameboard from './components/Gameboard';
 import Scoreboard from './components/Scoreboard';
 
@@ -53,7 +52,7 @@ function App() {
     setArray(prevArray=>shuffle(prevArray));
   }
 
-  return(<div>
+  return(<div className='game flex flex-col gap-5'>
     <Scoreboard cScore={currentScore} hScore={highScore}/>
     <Gameboard cardClickHandler={handleCardClick} cardData={array}/>
   </div>);

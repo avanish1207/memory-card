@@ -1,9 +1,9 @@
-import './Gameboard.css';
+// import './Gameboard.css';
 import Card from './Card';
 
 function Gameboard({cardClickHandler, cardData}){
     return(
-        <div className='gameboard'>
+        <div className='gameboard m-1 grid grid-cols-4'>
             {
                 cardData.map(card=>(
                     <Card 

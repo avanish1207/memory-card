@@ -1,11 +1,9 @@
-import './Scoreboard.css';
-
 function Scoreboard({cScore, hScore}){
     return(
-        <div className='scoreboard'>
-            <h3>Scoreboard</h3>
-            <div className='cScore'>Current Score: {cScore}</div>
-            <div className='hScore'>Highest Score: {hScore}</div>
+        <div className='scoreboard text-white flex flex-col p-1'>
+            <h2 className="flex justify-center text-xl">Scoreboard</h2>
+            <div className='cScore flex justify-center'>Current Score: {cScore}</div>
+            <div className='hScore flex justify-center'>Highest Score: {hScore}</div>
         </div>
     );
 }

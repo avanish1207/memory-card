@@ -1,7 +1,18 @@
 // import './Gameboard.css';
 import Card from './Card';
 
-function Gameboard({cardClickHandler, cardData}){
+interface Pokemon{
+  id: number;
+  name: string;
+  sprite: string;
+}
+
+interface Game{
+    cardClickHandler: any;
+    cardData: Pokemon[];
+}
+
+function Gameboard({cardClickHandler, cardData}:Game){
     return(
         <div className='gameboard m-1 grid grid-cols-4'>
             {

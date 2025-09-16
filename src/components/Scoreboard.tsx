@@ -1,4 +1,9 @@
-function Scoreboard({cScore, hScore}){
+interface Scores{
+    cScore: number;
+    hScore: number;
+}
+
+function Scoreboard({cScore, hScore}: Scores){
     return(
         <div className='scoreboard text-white flex flex-col p-1'>
             <h2 className="flex justify-center text-xl">Scoreboard</h2>
